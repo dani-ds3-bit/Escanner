@@ -15,13 +15,13 @@ function startScanner() {
       scanner.stop().then(() => {
         scanner.clear();
         scannerContainer.style.display = 'none';
-        // abrir info.html pasando la URL escaneada como parámetro
+        // abrir info
         const encoded = encodeURIComponent(qrCodeMessage);
         window.open(`info.html?data=${encoded}`, '_blank');
       });
     },
     errorMessage => {
-      // manejo de errores opcional
+     
     }
   ).catch(err => {
     console.error('Error al iniciar escáner:', err);
