@@ -1,8 +1,8 @@
-// Obtener parámetro ?data=...
+// Obtenencion de parámetros
 const params = new URLSearchParams(window.location.search);
 const data = params.get('data') || 'Descripción no disponible';
 
-// 1) Mostrar texto estático o desde un archivo TXT
+// muestra archivo TXT
 fetch('descripcion.txt')
   .then(resp => resp.text())
   .then(texto => {
@@ -14,11 +14,10 @@ fetch('descripcion.txt')
     window._textoADecir = data;
   });
 
-// 2) Configurar enlace oficial dinámico (opcional)
-//    Aquí podrías derivar la URL oficial según el parámetro `data`
+//    URL del sitio historico etc
 document.getElementById('link-oficial').href = 'https://institucion.example.org';
 
-// 3) Función para leer en voz alta
+// leer en voz alta
 function leerDescripcion() {
   if (!window._textoADecir) return;
   const utter = new SpeechSynthesisUtterance(window._textoADecir);
