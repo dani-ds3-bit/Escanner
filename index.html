@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Buscador con Escáner</title>
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="top-bar">
+    <button class="back-button" onclick="goBack()">🔙 Regresar</button>
+  </div>
+
+  <div class="search-container">
+    <span>🔍</span>
+    <input type="text" id="search-input" placeholder="Buscar en productos...">
+    <button onclick="startScanner()">📷</button>
+  </div>
+
+  <div id="scanner-container">
+    <div id="reader"></div>
+    <label class="file-upload" for="file-upload-input">
+      📁 Cargar documento
+      <input type="file" id="file-upload-input" accept=".pdf,.doc,.docx,.jpg,.png" style="display:none">
+    </label>
+  </div>
+
+  <div id="result"></div>
+
+  <script src="scanner.js"></script>
+</body>
+</html>

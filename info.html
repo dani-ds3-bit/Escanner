@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Información del Punto</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="top-bar">
+    <button class="back-button" onclick="history.back()">🔙 Volver</button>
+  </div>
+
+  <div style="text-align:center; max-width:600px; margin:auto; padding:20px;">
+    <img id="emblema" src="emblema.jpg" alt="Emblema" style="max-width:100%; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,0.2); margin-bottom:20px;">
+    <div id="descripcion" style="font-size:18px; line-height:1.5; margin-bottom:20px;">
+      Cargando descripción…
+    </div>
+    <button onclick="leerDescripcion()" style="background:#007bff;color:#fff;border:none;padding:10px 16px;border-radius:8px;font-size:16px;cursor:pointer;">
+      🔊 Escuchar descripción
+    </button>
+    <a id="link-oficial" href="#" target="_blank" style="display:block;margin-top:24px;color:#007bff;text-decoration:none;">
+      Sitio oficial
+    </a>
+  </div>
+
+  <script src="info.js"></script>
+</body>
+</html>
